@@ -1,5 +1,5 @@
-name: aws.s3_get_all_buckets
-action_ref: aws.s3_get_all_buckets
+name: buckets
+action_ref: s3_get_all_buckets
 description: Show status for hosts (ansible ping module)
 formats:
   - display: "status <hosts>"
