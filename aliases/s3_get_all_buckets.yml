@@ -6,5 +6,10 @@ formats:
     representation:
       - "showbuckets"
 result:
-  format: |
-Here is your cow: ```{{ execution.result.stdout }}``` {~}
+format: |
+    {% if execution.status == 'succeeded' %}Here is your cow: ```{{ execution.result.stdout }}``` {~}{% else %}
+    Sorry, no cows this time {~}
+    Exit Code: `{{ execution.result.return_code }}`
+    Stderr: ```{{ execution.result.stderr }}```
+    Hint: Make sure `cowsay` utility is installed.
+    {% endif %}
