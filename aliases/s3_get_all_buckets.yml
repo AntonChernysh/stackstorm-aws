@@ -5,6 +5,8 @@ formats:
   - display: "status <hosts>"
     representation:
       - "showbuckets"
+ack:
+  format: "Executing `{{ actionalias.ref }}`, your ID is `{{ execution.id[:2] }}..{{ execution.id[-2:] }}`"
 result:
   format: |
     {% if execution.status == 'succeeded' %}Here is your cow: ```{{ execution.result.stdout }}``` {~}{% else %}
@@ -13,3 +15,5 @@ result:
     Stderr: ```{{ execution.result.stderr }}```
     Hint: Make sure `cowsay` utility is installed.
     {% endif %}
+
+    
