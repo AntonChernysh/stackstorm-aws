@@ -6,7 +6,7 @@ formats:
     representation:
       - "showbuckets"
 result:
-format: |
+  format: |
     {% if execution.status == 'succeeded' %}Here is your cow: ```{{ execution.result.stdout }}``` {~}{% else %}
     Sorry, no cows this time {~}
     Exit Code: `{{ execution.result.return_code }}`
