@@ -7,5 +7,4 @@ formats:
       - "showbuckets"
 result:
   format: |
-    Here is a list of available buckets:
-    ```{{ execution.result.stdout }}```
+Here is your cow: ```{{ execution.result.stdout }}``` {~}
