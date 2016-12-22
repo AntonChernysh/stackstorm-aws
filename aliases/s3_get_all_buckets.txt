@@ -1,0 +1,11 @@
+name: aws.s3_get_all_buckets
+action_ref: aws.s3_get_all_buckets
+description: Show status for hosts (ansible ping module)
+formats:
+  - display: "status <hosts>"
+    representation:
+      - "showbuckets"
+result:
+  format: |
+    Here is a list of available buckets:
+    ```{{ execution.result.stdout }}```
